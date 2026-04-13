@@ -105,6 +105,8 @@ RATE_LIMIT_MAX=300
 
 Do not commit `.env`; it is for local development only.
 
+For Vercel deployments, your MongoDB Atlas cluster must allow connections from Vercel. For a learning project, add `0.0.0.0/0` in Atlas under **Network Access**. For production, use a stricter networking approach.
+
 ## Running Playwright API Tests
 
 Start the API first, then run:
