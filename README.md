@@ -118,10 +118,18 @@ Open Playwright UI mode:
 npm run test:api:ui
 ```
 
+Run the full end-to-end API journey suite only:
+
+```powershell
+$env:API_BASE_URL="https://playwright-api-learning-backend.vercel.app"
+npx playwright test tests/full-api-journey.spec.js
+```
+
 The Playwright tests are in:
 
 ```text
 tests/api.spec.js
+tests/full-api-journey.spec.js
 ```
 
 ## Playwright Request Pattern
