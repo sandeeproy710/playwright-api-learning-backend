@@ -1,0 +1,38 @@
+{
+  "name": "playwright-api-learning-backend",
+  "version": "1.0.0",
+  "description": "MongoDB-backed Express API for learning API testing with Playwright.",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "test:api": "playwright test",
+    "test:api:ui": "playwright test --ui"
+  },
+  "keywords": [
+    "api",
+    "express",
+    "mongodb",
+    "mongoose",
+    "playwright"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5",
+    "morgan": "^1.10.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "nodemon": "^3.1.9"
+  }
+}
