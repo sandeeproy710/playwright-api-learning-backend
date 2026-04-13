@@ -4,9 +4,13 @@ import { connectDatabase } from '../src/config/database.js';
 
 const app = createApp();
 let databaseConnectionPromise;
+const publicRuntimeRoutes = new Set(['/', '/api/health', '/api/docs']);
 
 export default async function handler(request, response) {
-  databaseConnectionPromise ||= connectDatabase(config.mongoUri);
-  await databaseConnectionPromise;
+  if (!publicRuntimeRoutes.has(request.url?.split('?')[0])) {
+    databaseConnectionPromise ||= connectDatabase(config.mongoUri);
+    await databaseConnectionPromise;
+  }
+
   return app(request, response);
 }

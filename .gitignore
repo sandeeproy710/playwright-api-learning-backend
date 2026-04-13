@@ -4,3 +4,5 @@ playwright-report/
 test-results/
 npm-debug.log*
 coverage/
+
+.vercel
